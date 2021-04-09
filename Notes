@@ -1,0 +1,35 @@
+npm init -y
+npm i discord.js
+
+//en discord crear server
+//discord developer en la web
+//creamos una nueva aplicacion
+//una vez creada bos vamos a bot
+//creamos un nuevo bot
+// mostramos key y la copiamos en bot.ts login
+//por seguridad guardamos esta lcave en un variable de entorno
+//le dmaos los permisos al bot
+//ahora nos vamos a OAuth2
+//le damos a bot luego administrador in gresmoas a url
+
+//para que sea mas simple su uso usamos un paquete
+npm i dotenv -D
+//instalamos typescript
+npm i typescript -D
+npm i @types/node -D
+//una configuracion predeterminada de typescript
+npx tsc --init
+//esto crea tsconfig.json
+//modificaciones al archivo
+    "target": "es6",                                /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
+    "outDir": "./dist",                              /* Redirect output structure to the directory. */
+    "rootDir": "./src",                             /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+    "resolveJsonModule": true //lo agragamos al final para poder trabajar con arhivos json
+//instalar nodmeon
+npm i nodemon -D
+//una ves instalado nodmeon para que primero se ejecute tsc y despues start
+//modificamos package.json
+    "build":"tsc",//de ts a js
+    "start":"node dist/bot.js",// despues de build busca la carpeta y ejecuta bot.js
+    "dev": "nodemon -e ts --exec \"npm run build && npm start\"" escucha todoslos archivos ts
+    // y si algo cmabia ejecuta primero build y despues start
